@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BaseViewController.h
 //  SLMenu
 //
 //  Created by Georgios Pessios on 10/01/16.
@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseViewController.h"
 
-@interface ViewController : BaseViewController
+
+@interface BaseViewController : UIViewController
+
+
+-(void)addSlideMenuButton;
+-(void)addSlideMenuSwipeGesture;
 
 
 @end
-

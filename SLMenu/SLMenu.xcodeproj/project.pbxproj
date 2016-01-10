@@ -15,6 +15,8 @@
 		DCEBF3281C42BE4B0047250C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCEBF3261C42BE4B0047250C /* LaunchScreen.storyboard */; };
 		DCEBF3331C42BE4B0047250C /* SLMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEBF3321C42BE4B0047250C /* SLMenuTests.m */; };
 		DCEBF33E1C42BE4B0047250C /* SLMenuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEBF33D1C42BE4B0047250C /* SLMenuUITests.m */; };
+		DCEBF34D1C42BEDB0047250C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEBF34C1C42BEDB0047250C /* BaseViewController.m */; };
+		DCEBF3501C42BEEF0047250C /* SLMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEBF34F1C42BEEF0047250C /* SLMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		DCEBF3391C42BE4B0047250C /* SLMenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SLMenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCEBF33D1C42BE4B0047250C /* SLMenuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLMenuUITests.m; sourceTree = "<group>"; };
 		DCEBF33F1C42BE4B0047250C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCEBF34B1C42BEDA0047250C /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		DCEBF34C1C42BEDB0047250C /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		DCEBF34E1C42BEEF0047250C /* SLMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLMenuViewController.h; sourceTree = "<group>"; };
+		DCEBF34F1C42BEEF0047250C /* SLMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,10 @@
 				DCEBF3261C42BE4B0047250C /* LaunchScreen.storyboard */,
 				DCEBF3291C42BE4B0047250C /* Info.plist */,
 				DCEBF3181C42BE4B0047250C /* Supporting Files */,
+				DCEBF34B1C42BEDA0047250C /* BaseViewController.h */,
+				DCEBF34C1C42BEDB0047250C /* BaseViewController.m */,
+				DCEBF34E1C42BEEF0047250C /* SLMenuViewController.h */,
+				DCEBF34F1C42BEEF0047250C /* SLMenuViewController.m */,
 			);
 			path = SLMenu;
 			sourceTree = "<group>";
@@ -270,7 +280,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCEBF3501C42BEEF0047250C /* SLMenuViewController.m in Sources */,
 				DCEBF3201C42BE4B0047250C /* ViewController.m in Sources */,
+				DCEBF34D1C42BEDB0047250C /* BaseViewController.m in Sources */,
 				DCEBF31D1C42BE4B0047250C /* AppDelegate.m in Sources */,
 				DCEBF31A1C42BE4B0047250C /* main.m in Sources */,
 			);
@@ -496,6 +508,7 @@
 				DCEBF3441C42BE4B0047250C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DCEBF3451C42BE4B0047250C /* Build configuration list for PBXNativeTarget "SLMenuTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +517,7 @@
 				DCEBF3471C42BE4B0047250C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DCEBF3481C42BE4B0047250C /* Build configuration list for PBXNativeTarget "SLMenuUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +526,7 @@
 				DCEBF34A1C42BE4B0047250C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

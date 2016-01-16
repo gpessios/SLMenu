@@ -1,6 +1,6 @@
 ## Synopsis
 
-A simple sliding lef menu that you could use on your projects. Works either by clicking on a button drawn by code (classic three lines button layout) or with sliding right(open) left(close) gestures.
+A simple sliding left menu that you could use on your projects. Works either by clicking on a button drawn by code (classic three lines button layout) or with sliding right(open) left(close) gestures.
 
 ## Code Example
 

@@ -6,14 +6,6 @@
 //  Copyright © 2016 Georgios Pessios. All rights reserved.
 //
 
-//
-//  MenuViewController.m
-//  SlideMenu
-//
-//  Created by Georgios Pessios on 08/01/16.
-//  Copyright © 2016 Georgios Pessios. All rights reserved.
-//
-
 #import "SLMenuViewController.h"
 
 @implementation SLMenuViewController
@@ -45,21 +37,5 @@
         [self removeFromParentViewController];
         
     }];
-}
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
-    return 1;
-    
-}
-
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OneCell"];
-    
-    cell.textLabel.text = @"TEST";
-    
-    return cell;
 }
 @end

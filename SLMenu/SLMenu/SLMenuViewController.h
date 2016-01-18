@@ -16,7 +16,7 @@
 
 @end
 
-@interface SLMenuViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface SLMenuViewController : UIViewController
 
 @property (weak, nonatomic)id<SlideMenuProtocolDelegate> delegate;
 @property (nonatomic, strong)IBOutlet UIButton *btnCloseMenuOverlay;

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5mA-bd-hVo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5mA-bd-hVo">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Menu View Controller-->
@@ -19,30 +18,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmP-gR-YaE">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="600"/>
+                                <rect key="frame" x="0.0" y="64" width="240" height="536"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="600" id="KKz-pR-AfG"/>
-                                    <constraint firstAttribute="width" constant="240" id="OWr-zF-nJf"/>
+                                    <constraint firstAttribute="width" constant="240" id="owQ-jC-C4X"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="KKz-pR-AfG"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hmP-gR-YaE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="DfN-Kf-sVd"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hmP-gR-YaE" secondAttribute="bottom" id="c4d-i9-MKg"/>
-                            <constraint firstItem="hmP-gR-YaE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="t63-Ey-PPC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hmP-gR-YaE" secondAttribute="bottom" id="J8g-zc-QCY"/>
+                            <constraint firstItem="hmP-gR-YaE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rxU-c3-FTA"/>
+                            <constraint firstItem="hmP-gR-YaE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yx4-KH-AUh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="fMG-bu-91d"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-173" y="358"/>
+            <point key="canvasLocation" x="639" y="358"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Nnd-xC-5kd">
@@ -61,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtd-uq-BGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1505" y="358"/>
+            <point key="canvasLocation" x="2317" y="358"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yb4-Kb-pv3">
@@ -79,7 +73,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWv-fY-Fbx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="693" y="358"/>
+            <point key="canvasLocation" x="1505" y="358"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bnb-aZ-DsX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7tC-HL-YEb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LlL-0X-MNb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7Vz-el-5y1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fGP-cg-ANt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-173" y="358"/>
         </scene>
     </scenes>
 </document>

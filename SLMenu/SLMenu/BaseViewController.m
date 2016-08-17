@@ -108,11 +108,10 @@
         
     }else if(self.isOpen == false){
         self.isOpen = true;
-        self.menuVC.btnMenu.tag = 100;
-        
         self.menuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SLMenuViewController"];
         self.menuVC.delegate = self;
         [self.view addSubview:self.menuVC.view];
+        [self.menuVC.view setBackgroundColor:[[UIColor clearColor] colorWithAlphaComponent:0.1]];
         [self addChildViewController:self.menuVC];
         [self.menuVC.view layoutIfNeeded];
         self.menuVC.view.frame = CGRectMake(-[UIScreen mainScreen].bounds.size.width, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
@@ -134,10 +133,8 @@
 
 -(IBAction)onSlideMenuButtonPressed:(UIButton *)sender{
     
-    if (sender.tag == 100){
-        [self slideMenuItemSelectedAtIndex:-1];
+    if (self.isOpen == true){
         self.isOpen = false;
-        sender.tag = 0;
         UIView *viewMenuBack = [[UIView alloc] init];
         viewMenuBack = self.view.subviews.lastObject;
         
@@ -156,28 +153,33 @@
             
         }];
         return;
+    }else{
+    
+        self.isOpen= true;
+        self.menuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SLMenuViewController"];
+        self.menuVC.btnMenu = sender;
+        self.menuVC.delegate = self;
+        [self.view addSubview:self.menuVC.view];
+        [self.menuVC.view setBackgroundColor:[[UIColor clearColor] colorWithAlphaComponent:0.1]];
+        [self addChildViewController:self.menuVC];
+        [self.menuVC.view layoutIfNeeded];
+        self.menuVC.view.frame = CGRectMake(-[UIScreen mainScreen].bounds.size.width, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+        
+        [UIView animateWithDuration:0.3 animations:^{
+            
+            self.menuVC.view.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+            
+            
+        } completion:^(BOOL finished) {
+            
+            sender.enabled = true;
+            
+        }];
+    
+    
     }
     
-    sender.tag = 100;
-    self.isOpen= true;
-    self.menuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SLMenuViewController"];
-    self.menuVC.btnMenu = sender;
-    self.menuVC.delegate = self;
-    [self.view addSubview:self.menuVC.view];
-    [self addChildViewController:self.menuVC];
-    [self.menuVC.view layoutIfNeeded];
-    self.menuVC.view.frame = CGRectMake(-[UIScreen mainScreen].bounds.size.width, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
     
-    [UIView animateWithDuration:0.3 animations:^{
-        
-        self.menuVC.view.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width/2, [UIScreen mainScreen].bounds.size.height);
-        
-        
-    } completion:^(BOOL finished) {
-        
-        sender.enabled = true;
-        
-    }];
     
 }
 

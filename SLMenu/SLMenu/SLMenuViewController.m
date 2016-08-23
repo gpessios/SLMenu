@@ -11,31 +11,4 @@
 @implementation SLMenuViewController
 
 
--(IBAction)onCloseMenuClick:(UIButton *)button{
-    self.btnMenu.tag = 0;
-    
-    if (self.delegate != nil){
-        
-        NSUInteger index = button.tag;
-        if (button == self.btnCloseMenuOverlay){
-            
-            index = -1;
-            
-        }
-        
-        [self.delegate slideMenuItemSelectedAtIndex:index];
-    }
-    
-    [UIView animateWithDuration:0.3 animations:^{
-        self.view.frame = CGRectMake(-[UIScreen mainScreen].bounds.size.width, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
-        [self.view layoutIfNeeded];
-        self.view.backgroundColor = [UIColor clearColor];
-        
-    } completion:^(BOOL finished) {
-        
-        [self.view removeFromSuperview];
-        [self removeFromParentViewController];
-        
-    }];
-}
 @end

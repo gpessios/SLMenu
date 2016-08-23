@@ -9,7 +9,7 @@
 #import "BaseViewController.h"
 #import "SLMenuViewController.h"
 
-@interface BaseViewController() <SlideMenuProtocolDelegate>
+@interface BaseViewController()
 
 @property(nonatomic, strong)SLMenuViewController *menuVC;
 @property(nonatomic) BOOL isOpen;
@@ -72,18 +72,12 @@
     
 }
 
--(void)slideMenuItemSelectedAtIndex: (NSUInteger)index{
-    
-}
-
 -(IBAction)handleSwipeGesture:(UISwipeGestureRecognizer *)recognizer{
     
     if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
         
         if (recognizer){
             self.isOpen = false;
-            [self slideMenuItemSelectedAtIndex:-1];
-            self.menuVC.btnMenu.tag = 0;
             UIView *viewMenuBack = [[UIView alloc] init];
             viewMenuBack = self.view.subviews.lastObject;
             
@@ -109,7 +103,6 @@
     }else if(self.isOpen == false){
         self.isOpen = true;
         self.menuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SLMenuViewController"];
-        self.menuVC.delegate = self;
         [self.view addSubview:self.menuVC.view];
         [self.menuVC.view setBackgroundColor:[[UIColor clearColor] colorWithAlphaComponent:0.1]];
         [self addChildViewController:self.menuVC];
@@ -158,7 +151,6 @@
         self.isOpen= true;
         self.menuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SLMenuViewController"];
         self.menuVC.btnMenu = sender;
-        self.menuVC.delegate = self;
         [self.view addSubview:self.menuVC.view];
         [self.menuVC.view setBackgroundColor:[[UIColor clearColor] colorWithAlphaComponent:0.1]];
         [self addChildViewController:self.menuVC];

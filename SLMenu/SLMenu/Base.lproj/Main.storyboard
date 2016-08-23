@@ -41,7 +41,7 @@
         <!--View Controller-->
         <scene sceneID="Nnd-xC-5kd">
             <objects>
-                <viewController id="2ad-Mo-wGr" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="2ad-Mo-wGr" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aT6-3g-bCg"/>
                         <viewControllerLayoutGuide type="bottom" id="F4O-l4-HpU"/>
@@ -60,7 +60,7 @@
         <!--Navigation Controller-->
         <scene sceneID="yb4-Kb-pv3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5mA-bd-hVo" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="GeneralNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="5mA-bd-hVo" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="j0Y-8m-d7L">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -78,7 +78,7 @@
         <!--Navigation Controller-->
         <scene sceneID="bnb-aZ-DsX">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7tC-HL-YEb" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MenuNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="7tC-HL-YEb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LlL-0X-MNb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
